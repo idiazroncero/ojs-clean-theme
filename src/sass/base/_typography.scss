@@ -1,0 +1,35 @@
+//------
+// FONT DEFINITIONS
+// ¡Please remove css @imports in production! They hurt performance.
+// You should download your fonts and place them in a separate folder or use websafe fonts
+//------
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Muli:300,400,700');
+
+
+// Reset all text components' margin. Only use bottom margin to separate items.
+// Prevents weird box behaviors.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+	margin-top:0;
+	margin-bottom:ritmo(4);
+}
+ 
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $alt-font-family;
+}
+
+h1 {
+	@include ritmo-margins(4);
+}

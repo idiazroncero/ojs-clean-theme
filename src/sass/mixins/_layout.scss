@@ -1,0 +1,9 @@
+@mixin align-page-to($align-page:"center") {
+	@if $align-page == "left" {
+		margin: auto auto auto 0;
+	} @else if $align-page == "right" {
+		margin: auto 0 auto auto;
+	} @else if $align-page == "center" {
+		margin: 0 auto;
+	}
+}

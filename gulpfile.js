@@ -26,7 +26,11 @@ gulp.task('styles', function(){
 				],
 				{ syntax: syntax_scss }
 			).on('error', gutil.log))
-			.pipe(sass({outputStyle: 'nested', sourceMap: false}).on('error', sass.logError))
+			.pipe(sass({
+					outputStyle: 'nested',
+					sourceMap: false,
+					includePaths: ['node_modules/ritmo/']
+				}).on('error', sass.logError))
 			.pipe(postcss([autoprefixer]))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('styles'))

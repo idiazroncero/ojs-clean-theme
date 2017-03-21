@@ -1,0 +1,68 @@
+//------
+// COLORS
+// Define your color palette. Use as many as you want and then refer them from
+// semantic variables elsewhere.
+//------
+
+$green: green;
+$red: red;
+
+
+
+//------
+// TRYPOGRAPHY
+// Font families and weights.
+//------
+
+// Websafe fonts
+$serif: Georgia, "Times News Roman", Times, serif;
+$sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Our own typefaces
+$merriweather: 'Merriweather', $serif;
+$muli: 'Muli', $sans-serif;
+
+// You shouldn't use more than two typefaces per project
+$base-font-family: $muli;
+$alt-font-family: $merriweather;
+
+// When using typefaces with several styles, it is good to explicitly declare
+// the meaning of "bold" or "light", instead of letting the browser do the guesswork
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+
+
+//------
+// RITMO: Vertical rhythm variables
+// Official docs: https://ritmo.marzeelabs.org/
+//------
+
+$base-font-size:20px;
+$base-line-height: 1.333;
+$base-line-multi: 4;
+$base-line-unit: ($base-font-size * $base-line-height) / $base-line-multi;
+$ritmo-unit: 'rem';
+$rem-with-px-fallback: true;
+$ritmo-border-width:1px;
+$round-to-nearest-half-line: true;
+$min-line-padding:2px;
+
+
+
+//------
+// LINKS
+//------
+
+$link-active-color: $red;
+$link-underline: "onHover"; // Accepted values: true / "onHover" / false
+
+
+
+//------
+// LAYOUT
+//------
+
+$max-width: 1200px;
+$align-page:"center"; // Accepted values: "left" / "center" / "right"

@@ -1,5 +1,25 @@
-body {
-	background: darken(#ccc, 15%);
-	display:flex;
-	font-size: 15em;
+//------
+// CONFIG
+// Imports all variables, mixins and extrernal resources
+//------
+
+@import "config";
+@import "mixins";
+@import "ritmo";
+
+//------
+// BASE
+// Imports basic styling for html elements, normalization/resets 
+// and sets a vertical rhythm
+//------
+
+@import "base/normalize";
+@import "base/links";
+@import "base/typography";
+
+
+
+.pkp_structure_page {
+	max-width:$max-width;
+	@include align-page-to($align-page);
 }

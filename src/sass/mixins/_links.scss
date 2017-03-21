@@ -1,0 +1,44 @@
+//------
+// Completely disables an existing <a> selector, equating it to plain text
+// Optionally, pass a different color.
+//------
+
+@mixin disable-link($color:"") {
+	&,
+	&:link, 
+	&:visited, 
+	&:focus, 
+	&:hover, 
+	&:active {
+		border-bottom:none;
+		text-decoration:none;
+		@if ($color != "") {
+			color: $color;
+		}
+	}
+}
+
+//------
+// Overrides behavior of a given <a> selector
+// Takes a new color and a hover color as arguments.
+//------
+@mixin override-link($color:"", $hover-color:"") {
+	&,
+	&:link,
+	&:visited {
+		@if ($color != "") {
+			color: $color;
+		}
+	}
+	&:focus,
+	&:hover {
+		@if ($hover-color != "") {
+			color: $hover-color;
+		}
+	}
+	&:active {
+		@if ($color != "") {
+			color: $color;
+		}
+	}
+}
