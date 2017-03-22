@@ -1,0 +1,13 @@
+// MAIN WRAPPER
+.pkp_structure_page {
+	max-width:$max-width;
+	@include align-page-to($align-page);
+}
+
+// HEADER
+.pkp_structure_head {
+	margin-bottom: ritmo(2);
+	@include ritmo-bottom-border($lines:2)
+	border-bottom-color: $gray_xs;
+	border-bottom-style: solid;
+}

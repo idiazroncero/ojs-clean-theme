@@ -7,21 +7,20 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Muli:300,400,700');
 
 
-// Reset all text components' margin. Only use bottom margin to separate items.
-// Prevents weird box behaviors.
-
+// In order to avoid weird box sizing behavior, 
+// we only apply margin as margin-bottom on typographic elements
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+p,
 ul,
 ol {
 	margin-top:0;
-	margin-bottom:ritmo(4);
+	margin-bottom: ritmo(2);
 }
- 
 
 h1,
 h2,
@@ -31,5 +30,25 @@ h4 {
 }
 
 h1 {
-	@include ritmo-margins(4);
+	@include ritmo-font-size($h1-size);
+}
+
+h2 {
+	@include ritmo-font-size($h2-size);
+}
+
+h3 {
+	@include ritmo-font-size($h3-size);
+}
+
+h4 {
+	@include ritmo-font-size($h4-size);
+}
+
+h5 {
+	@include ritmo-font-size($h5-size);
+}
+
+h6 {
+	@include ritmo-font-size($h6-size);
 }

@@ -14,18 +14,17 @@ html {
   font-family: $base-font-family; /* 1 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
-}
-
-@include ritmo-baseline();
-
-/* Global box-sizing. Apply a natural box layout model to all elements, but allowing components to change */
-html {
+  /* Global box-sizing. Apply a natural box layout model to all elements, but allowing components to change */
   box-sizing: border-box;
+  color: $font-color;
+  background: $background-color;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+@include ritmo-baseline();
 
 /* Sections
    ========================================================================== */

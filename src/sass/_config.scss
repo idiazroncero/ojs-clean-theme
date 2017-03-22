@@ -7,6 +7,18 @@
 $green: green;
 $red: red;
 
+$black: #3b3b3b;
+$white: #fff;
+
+// We get the gray palette as color stops fro, $black to $white;
+
+$gray_xs: mix($black, $white, 10%);
+$gray_s: mix($black, $white, 26%);
+$gray_m: mix($black, $white, 42%);
+$gray_l: mix($black, $white, 58%);
+$gray_xl: mix($black, $white, 74%);
+$gray_xxl: mix($black, $white, 90%);
+
 
 
 //------
@@ -41,7 +53,7 @@ $bold: 700;
 
 $base-font-size:20px;
 $base-line-height: 1.333;
-$base-line-multi: 4;
+$base-line-multi: 2;
 $base-line-unit: ($base-font-size * $base-line-height) / $base-line-multi;
 $ritmo-unit: 'rem';
 $rem-with-px-fallback: true;
@@ -49,14 +61,99 @@ $ritmo-border-width:1px;
 $round-to-nearest-half-line: true;
 $min-line-padding:2px;
 
+// Library of type-scales. See http://type-scale.com/ for further reference.
+$perfectFifth: (
+	h1 : 5.063,
+	h2 : 3.375,
+	h3 : 2.25,
+	h4 : 1.5,
+	h5 : 0.667,
+	h6 : 0.444,
+);
+
+$augmented: (
+	h1 : 3.998,
+	h2 : 2.827,
+	h3 : 1.999,
+	h4 : 1.414,
+	h5 : 0.707,
+	h6 : 0.5,
+);
+
+$perfectFourth: (
+	h1 : 3.998,
+	h2 : 2.827,
+	h3 : 1.999,
+	h4 : 1.414,
+	h5 : 0.707,
+	h6 : 0.5,
+);
+
+$majorThird: (
+	h1 : 2.441,
+	h2 : 1.953,
+	h3 : 1.563,
+	h4 : 1.25,
+	h5 : 0.8,
+	h6 : 0.64,
+);
+
+$majorThird: (
+	h1 : 2.441,
+	h2 : 1.953,
+	h3 : 1.563,
+	h4 : 1.25,
+	h5 : 0.8,
+	h6 : 0.64,
+);
+
+$minorThird: (
+	h1 : 2.074,
+	h2 : 1.728,
+	h3 : 1.44,
+	h4 : 1.2,
+	h5 : 0.833,
+	h6 : 0.694,
+);
+
+$majorSecond: (
+	h1 : 1.602,
+	h2 : 1.424,
+	h3 : 1.266,
+	h4 : 1.125,
+	h5 : 0.889,
+	h6 : 0.79,
+);
+
+$minorSecond: (
+	h1 : 1.296,
+	h2 : 1.215,
+	h3 : 1.138,
+	h4 : 1.067,
+	h5 : 0.937,
+	h6 : 0.878,
+);
+
+// Chose your type scale from amongst the preceding ones and apply it to <h> elements
+$type-scale: $majorThird;
+
+$h1-size: $base-font-size * map-get($type-scale, h1);
+$h2-size: $base-font-size * map-get($type-scale, h2);
+$h3-size: $base-font-size * map-get($type-scale, h3);
+$h4-size: $base-font-size * map-get($type-scale, h4);
+$h5-size: $base-font-size * map-get($type-scale, h5);
+$h6-size: $base-font-size * map-get($type-scale, h6);
+
 
 
 //------
 // LINKS
 //------
 
-$link-active-color: $red;
+$link-color: $green;
+$link-hover-color: shade($link-color, 33%);
 $link-underline: "onHover"; // Accepted values: true / "onHover" / false
+$link-active-reset: false; // "true" avoids marking links as visited
 
 
 
@@ -66,3 +163,6 @@ $link-underline: "onHover"; // Accepted values: true / "onHover" / false
 
 $max-width: 1200px;
 $align-page:"center"; // Accepted values: "left" / "center" / "right"
+
+$font-color: $black;
+$background-color: $white;

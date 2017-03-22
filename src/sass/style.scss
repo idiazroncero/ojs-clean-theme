@@ -3,9 +3,10 @@
 // Imports all variables, mixins and extrernal resources
 //------
 
-@import "config";
 @import "mixins";
+@import "config";
 @import "ritmo";
+
 
 //------
 // BASE
@@ -16,10 +17,13 @@
 @import "base/normalize";
 @import "base/links";
 @import "base/typography";
+@import "base/helpers";
 
 
+//------
+// LAYOUT
+// Basic layout styling for the main containers of the webpage
+//------
 
-.pkp_structure_page {
-	max-width:$max-width;
-	@include align-page-to($align-page);
-}
+@import "layout/pkp_structure";
+
