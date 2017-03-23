@@ -12,7 +12,7 @@
 	&:active {
 		border-bottom:none;
 		text-decoration:none;
-		@if ($color != "") {
+		@if $color != "" {
 			color: $color;
 		}
 	}

@@ -14,7 +14,6 @@
 // or the SCSWS compilation will fail!
 //------
 
-@import "../../node_modules/okaynav/app/css/okayNav";
 
 
 //------
@@ -35,4 +34,12 @@
 //------
 
 @import "layout/pkp_structure";
+
+
+//------
+// MODULES
+//------
+
+@import "modules/navigation";
+@import "modules/breadcrumb";
 

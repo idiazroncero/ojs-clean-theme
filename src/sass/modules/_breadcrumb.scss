@@ -1,0 +1,15 @@
+.cmp_breadcrumbs {
+	ol {
+		padding:0;
+		margin:0;
+		li {
+			display:inline-block;
+			h1 {
+				@include ritmo-font-size($base-font-size);
+				font-family: $base-font-family;
+				margin:0;
+			}
+		}
+	}
+	@include separator();
+}

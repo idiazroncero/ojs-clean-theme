@@ -1,0 +1,67 @@
+.pkp_nav_list {
+	padding:0;
+	li {
+		list-style-type:none;
+		display:inline-block;
+		position:relative;
+		a {
+			padding: ritmo(1);
+			text-transform: uppercase;
+			font-weight: $bold;
+			@include ritmo-font-size($h5-size);
+			@include disable-link($black);
+			display:block;
+		}
+		&:hover ul {
+			display:block;
+		}
+	}
+}
+
+.pkp_navigation_primary {
+	margin-bottom:ritmo(2);
+	li {
+		a {
+			padding: ritmo(1) ritmo(2);
+			letter-spacing: $letter-spacing;
+			background-color: $nav-color;
+			@include disable-link($black);
+			display:block;
+			&:hover {
+				background-color: $nav-hover-color;
+			}
+		}
+		&:hover ul {
+			display:block;
+		}
+		// Second-level menu
+		ul {
+			margin:0;
+			padding:ritmo(1);
+			position:absolute;
+			top:100%;
+			left:0;
+			//width:200px;
+			display:none;
+			background:$nav-submenu-color;
+			li {
+				display:block;
+				a {
+					padding:ritmo(1);
+					@include ritmo-font-size($h6-size);
+				}
+			}
+		}
+	}	
+}
+
+.pkp_navigation_user {
+	li {
+		a {
+			padding:0 ritmo(0.25);
+			@include ritmo-font-size($h6-size);
+			@include override-link($white, $gray_s);
+		}
+	}
+}
+

@@ -2,12 +2,41 @@
 .pkp_structure_page {
 	max-width:$max-width;
 	@include align-page-to($align-page);
+	padding-left: ritmo(2);
+	padding-right: ritmo(2);
 }
 
 // HEADER
 .pkp_structure_head {
+	@include separator();
+	position:relative;
+}
+
+.pkp_site_name_wrapper {
+	background-color:$gray_xl;
+	padding: ritmo(2);
 	margin-bottom: ritmo(2);
-	@include ritmo-bottom-border($lines:2)
-	border-bottom-color: $gray_xs;
-	border-bottom-style: solid;
+}
+
+.pkp_site_name {
+	margin:0;
+	a,img {
+		display:block;
+	}
+}
+
+.pkp_navigation_user_wrapper {
+	position:absolute;
+	top:0;
+	right:ritmo(1);
+}
+
+// CONTENT
+.pkp_structure_content {
+	@include separator();
+}
+
+//FOOTER
+.pkp_structure_footer_wrapper {
+
 }

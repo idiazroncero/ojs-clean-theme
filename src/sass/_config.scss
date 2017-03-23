@@ -22,7 +22,7 @@ $gray_xxl: mix($black, $white, 90%);
 
 
 //------
-// TRYPOGRAPHY
+// TYPOGRAPHY
 // Font families and weights.
 //------
 
@@ -51,7 +51,7 @@ $bold: 700;
 // Official docs: https://ritmo.marzeelabs.org/
 //------
 
-$base-font-size:20px;
+$base-font-size:18px;
 $base-line-height: 1.333;
 $base-line-multi: 2;
 $base-line-unit: ($base-font-size * $base-line-height) / $base-line-multi;
@@ -144,6 +144,8 @@ $h4-size: $base-font-size * map-get($type-scale, h4);
 $h5-size: $base-font-size * map-get($type-scale, h5);
 $h6-size: $base-font-size * map-get($type-scale, h6);
 
+$letter-spacing: 0.2em;
+
 
 
 //------
@@ -166,3 +168,14 @@ $align-page:"center"; // Accepted values: "left" / "center" / "right"
 
 $font-color: $black;
 $background-color: $white;
+$separator-color: $gray_xs;
+
+
+//------
+// NAVIGATION
+//------
+
+$nav-color: $gray_xs;
+$nav-hover-color: $gray_s;
+$nav-submenu-color: $gray_m;
+

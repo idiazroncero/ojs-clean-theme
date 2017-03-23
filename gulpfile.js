@@ -13,7 +13,6 @@ var reporter = require('postcss-reporter');
 
 // Array con todas nuestras dependencias js
 var jsDependencies = [
-	'node_modules/okaynav/dist/js/jquery.okayNav-min.js',
 ];
 
 // Por defecto, watch
