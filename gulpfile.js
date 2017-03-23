@@ -11,6 +11,11 @@ var autoprefixer = require('autoprefixer');
 var stylelint = require('stylelint');
 var reporter = require('postcss-reporter');
 
+// Array con todas nuestras dependencias js
+var jsDependencies = [
+	'node_modules/okaynav/dist/js/jquery.okayNav-min.js',
+];
+
 // Por defecto, watch
 gulp.task('default', function() {
 	gulp.watch('src/sass/**/*.scss',['styles']);
@@ -34,4 +39,10 @@ gulp.task('styles', function(){
 			.pipe(postcss([autoprefixer]))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('styles'))
-})
+});
+
+// Asegura que todas las dependencias js en node_modules acaban en la carpeta /js
+gulp.task('js', function(){
+	gulp.src(jsDependencies)
+		.pipe(gulp.dest('js/vendor'))
+});

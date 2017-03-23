@@ -15,5 +15,15 @@ Following [OJS theming conventions][ThemingGuide], the file structure of this th
 
 By Ignacio Díaz-Roncero
 
+## Third-party dependencies
+
+All third-party dependencies are handled using npm.
+
+Run `npm install` to install them.
+
+Clean Theme uses the following third-party projects:
+
+- OkayNav for handling menus on resize avoiding the dreaded hamburger menu
+
 
 [ThemingGuide]: https://pkp.gitbooks.io/pkp-theming-guide/content/en/css-less.html

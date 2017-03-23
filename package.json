@@ -31,5 +31,8 @@
     "postcss-scss": "^0.4.0",
     "ritmo": "^0.5.0",
     "stylelint": "^7.8.0"
+  },
+  "dependencies": {
+    "okaynav": "^2.0.2"
   }
 }

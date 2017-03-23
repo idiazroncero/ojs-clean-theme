@@ -7,6 +7,15 @@
 @import "config";
 @import "ritmo";
 
+//------
+// VENDOR
+// Third-party libraries.
+// IMPORTANT! Make sure you have installed all dependencies through 'npm install'
+// or the SCSWS compilation will fail!
+//------
+
+@import "../../node_modules/okaynav/app/css/okayNav";
+
 
 //------
 // BASE
