@@ -3,8 +3,8 @@
 // Optionally, pass a different color.
 //------
 
-@mixin disable-link($color:"") {
-	&,
+@mixin disable-link($color:$font-color) {
+	color: $color;
 	&:link, 
 	&:visited, 
 	&:focus, 
@@ -12,11 +12,9 @@
 	&:active {
 		border-bottom:none;
 		text-decoration:none;
-		@if $color != "" {
-			color: $color;
-		}
+		color: $color;
 	}
-}
+} 
 
 //------
 // Overrides behavior of a given <a> selector

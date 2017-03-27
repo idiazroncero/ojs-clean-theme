@@ -1,4 +1,14 @@
 //------
+// COMMON
+// Some shared values
+//------
+
+$border-radius: false;
+$transition-speed: 0.25s;
+$transition-ease: ease-in-out;
+
+
+//------
 // COLORS
 // Define your color palette. Use as many as you want and then refer them from
 // semantic variables elsewhere.
@@ -178,4 +188,15 @@ $separator-color: $gray_xs;
 $nav-color: $gray_xs;
 $nav-hover-color: $gray_s;
 $nav-submenu-color: $gray_m;
+
+//------
+// FORMS
+//------
+
+$input-border-width: false; // 'false' to cancel border
+$input-border-color: $gray_l;
+$input-background: $gray_s;
+$button-background: $black;
+$button-color: $white;
+
 

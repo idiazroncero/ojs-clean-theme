@@ -27,6 +27,7 @@ class CleanThemePlugin extends ThemePlugin {
         // Load custom JavaScript for this theme
         $this->addScript('okayNav', 'js/vendor/jquery.okayNav-min.js');
         $this->addScript('global', 'js/script.js');
+        $this->addScript('default', 'js/main.js');
     }
 
     /**

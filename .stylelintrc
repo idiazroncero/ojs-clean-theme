@@ -1,5 +1,5 @@
 {
   "rules": {
-    "unit-whitelist": ["em", "rem", "%", "px", "ms", "deg"]
+    "unit-whitelist": ["em", "rem", "%", "px", "ms", "deg", "vmin", "s"]
   }
 }

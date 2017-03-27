@@ -1,0 +1,30 @@
+.pkp_search_wrapper {
+	position:absolute;
+	bottom:ritmo(1);
+	right:ritmo(1);
+}
+
+.pkp_search {
+	@include horizontal-align();
+	// Controlled by main.js, copied from default theme
+	// TODO - Create our own handlers
+	input[name="query"] {
+		max-width:0px;
+		width:400px;
+		padding:0;
+		transition:max-width $transition-speed $transition-ease;
+	}
+	&.is_open {
+		input[name="query"]  {
+			padding:0 ritmo(1);
+			max-width:400px;
+		}
+	}
+	button {
+		@include hidden()
+	}
+}
+
+.search_prompt {
+	@include button-link();
+}

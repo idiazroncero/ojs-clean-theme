@@ -1,0 +1,16 @@
+input[type="text"] {
+	@if $input-border-width != false {
+		border: $input-border-width solid $input-border-color
+	} @else {
+		border:none;
+	}
+	@include apply-border-radius();
+	background-color: $input-background;
+	padding:0 ritmo(0.5);
+	@include ritmo-font-size($h5-size, 3);
+}
+
+button,
+input[type="submit"] {
+	@include button();
+}

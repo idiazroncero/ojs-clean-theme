@@ -19,10 +19,10 @@
 }
 
 .pkp_navigation_primary {
-	margin-bottom:ritmo(2);
+	margin:0;
 	li {
 		a {
-			padding: ritmo(1) ritmo(2);
+			padding: ritmo(0.5) ritmo(2);
 			letter-spacing: $letter-spacing;
 			background-color: $nav-color;
 			@include disable-link($black);
@@ -37,7 +37,7 @@
 		// Second-level menu
 		ul {
 			margin:0;
-			padding:ritmo(1);
+			padding:0;
 			position:absolute;
 			top:100%;
 			left:0;
@@ -46,6 +46,7 @@
 			background:$nav-submenu-color;
 			li {
 				display:block;
+				white-space:nowrap;
 				a {
 					padding:ritmo(1);
 					@include ritmo-font-size($h6-size);

@@ -67,6 +67,14 @@
 					{else}
 						</div>
 					{/if}
+
+					<div class="pkp_search_wrapper">
+
+						{* Search form *}
+						{include file="frontend/components/searchForm_simple.tpl"}
+						
+					</div>
+
 				</div>
 
 				{* Primary site navigation *}
@@ -77,13 +85,6 @@
 							{* Primary navigation menu for current application *}
 							{include file="frontend/components/primaryNavMenu.tpl"}
 
-						</div>
-
-						<div class="pkp_navigation_search_wrapper">
-
-							{* Search form *}
-							{include file="frontend/components/searchForm_simple.tpl"}
-							
 						</div>
 
 					</nav>

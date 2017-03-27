@@ -16,12 +16,18 @@
 	background-color:$gray_xl;
 	padding: ritmo(2);
 	margin-bottom: ritmo(2);
+	position:relative;
 }
 
 .pkp_site_name {
 	margin:0;
 	a,img {
 		display:block;
+	}
+	// Prevent logo images too tall (this is a user input without size limit)
+	img {
+		max-height:100px;
+		width:auto;
 	}
 }
 
@@ -34,7 +40,28 @@
 // CONTENT
 .pkp_structure_content {
 	@include separator();
+	&.has_sidebar {
+		// Flexbox with flaot fallback
+		display:flex;
+		@include clearfix();
+		.pkp_structure_main {
+			width:75%;
+			flex:3;
+			float:left;
+			padding-right:ritmo(2);
+		}
+		.pkp_structure_sidebar {
+			width:25%;
+			flex:1;
+			float:right;
+			@include ritmo-side-border(left, $lines:2);
+			border-left-color:$separator-color;
+			border-left-style:solid;
+		}
+	}
 }
+
+
 
 //FOOTER
 .pkp_structure_footer_wrapper {

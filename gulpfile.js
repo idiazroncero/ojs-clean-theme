@@ -23,7 +23,6 @@ gulp.task('default', function() {
 // Estilos: SASS + Lint + PostCSS
 gulp.task('styles', function(){
 	gulp.src('src/sass/**/*.scss')
-		.pipe(sourcemaps.init())
 			.pipe(postcss([
 					stylelint,
 					reporter({ clearMessages: true, throwError: true })
@@ -31,12 +30,11 @@ gulp.task('styles', function(){
 				{ syntax: syntax_scss }
 			).on('error', gutil.log))
 			.pipe(sass({
-					outputStyle: 'nested',
+					outputStyle: 'compact',
 					sourceMap: false,
 					includePaths: ['node_modules/ritmo/']
 				}).on('error', sass.logError))
 			.pipe(postcss([autoprefixer]))
-		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('styles'))
 });
 

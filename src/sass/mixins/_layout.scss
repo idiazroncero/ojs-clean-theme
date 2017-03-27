@@ -31,3 +31,13 @@
 	border-bottom-color: $color;
 	border-bottom-style: solid;
 }
+
+// Sets items on a container on an horizontal axis.
+// Flexbox-based with float-based fallback
+@mixin horizontal-align {
+	display:flex;
+	@include clearfix();
+	* {
+		float:left;
+	}
+}

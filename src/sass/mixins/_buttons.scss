@@ -1,0 +1,23 @@
+// Abstracting %button allows for reuse anywhere - anytime
+
+@mixin button() {
+	display:inline-block;
+	appearance:none;
+	padding:0 ritmo(1);
+	text-transform: uppercase;
+	letter-spacing: $letter-spacing;
+	border:none;
+	@include ritmo-font-size($h6-size, 3);
+	@include apply-border-radius();
+	background-color: $button-background;
+	color: $button-color;
+	&:hover {
+		background-color: shade($button-background, 20%);
+	}
+	font-weight:$bold;
+}
+
+@mixin button-link() {
+	@include button();
+	@include disable-link($button-color);
+}
